@@ -65,53 +65,7 @@ section {
     background: #3b3737;
 }
 
-.about-Oren {
-    z-index: 2;
-    display: block;
-    font-size: 2rem;
-    color: white;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	border: 3px solid #fff;
-	position: absolute;
-	top: 50%; 
-	left: 20%;
-	transform: translate(-50%, -50%);
-	padding: 2rem 4rem;
-	max-width: 100%;
-	min-width: 10%
-}
-
-.about-Rehman {
-    z-index: 2;
-    display: block;
-    font-size: 2rem;
-    color: white;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	border: 3px solid #fff;
-	position: absolute;
-	top: 50%; 
-	left: 50%;
-	transform: translate(-50%, -50%);
-	padding: 2rem 4rem;
-	max-width: 100%;
-  min-width: 10%
-}
-
-.about-Rifat {
-    z-index: 2;
-    display: block;
-    font-size: 2rem;
-    color: white;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	border: 3px solid #fff;
-	position: absolute;
-	top: 50%; 
-	left: 81%;
-	transform: translate(-50%, -50%);
-	padding: 2rem 4rem;
-	max-width: 100%;
-	min-width: 10%
+.about{
+  float: right;
+  width: 300px;
 }
