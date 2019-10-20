@@ -6,12 +6,16 @@
   html, body {margin: 0; height: 100%;}
   img {margin-bottom: 50px}
 
-  ::-webkit-scrollbar {
-      display: none;
+  .wrapper {
+    width: 650px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: relative;
+    height: 750px;
   }
 
 #login-Logo {
-  margin-left: 27%;
+  margin-left: 18%;
 }
 
   .login,
@@ -41,9 +45,6 @@
     font-weight: 300;
   }
 
-  #login-Logo {
-    margin-left: 27%;
-  }
 
   .btn-login {
     font-size: 0.9rem;

@@ -8,7 +8,7 @@ import logo from '../css/images/Logo.png';
 export default class CreateUser extends Component {
   constructor(props) {
     super(props);
-    this.state = { email: '', password: '', cpassword: '', mobile: '', milesPerGallon: 0 }
+    this.state = { fullname: '', email: '', password: '', cpassword: '', mobile: '', milesPerGallon: 0 }
   }
 
   render() {
@@ -21,44 +21,44 @@ export default class CreateUser extends Component {
               <div className="row">
                 <div className="col-md-9 col-lg-8 mx-auto">
 
-                <img className="sign-Up-Logo align-items-center text-Label" src={logo} width="250px" height="250px" alt="Climater Logo"/>
+                <img id="sign-Up-Logo" src={logo} width="250px" height="250px" alt="Climater Logo"/>
 
                   <h3 className="login-heading mb-4 align-items-center text-Label">Create an account!</h3>
                   <form id="signupform">
-                    <label htmlFor="inputName" className="text-center" >Full Name</label>
+                    <label htmlFor="inputUsername" className="text-center" >Full Name</label>
                     <div className="form-label-group">
-                      <input name="username" type="username" id="inputUsername" className="form-control" required autoFocus/>
+                      <input onChange={this.handleChange} name="fullname" type="text" id="inputUsername" className="form-control" required autoFocus/>
                     </div>
 
                     <label htmlFor="inputEmail"> Email address</label>
                     <div className="form-label-group">
-                      <input name="email" type="email" id="inputEmail" className="form-control" required autoFocus/>
+                      <input onChange={this.handleChange} name="email" type="email" id="inputEmail" className="form-control" required autoFocus/>
                     </div>
 
                     <label htmlFor="inputPassword">Password</label>
                     <div className="form-label-group">
-                      <input name="password" type="password" id="inputPassword" className="form-control" required/>
+                      <input onChange={this.handleChange} name="password" type="password" id="inputPassword" className="form-control" required/>
                     </div>
 
                     <label htmlFor="confirmPassword">Confirm Password</label>
                     <div className="form-label-group">
-                      <input type="password" id="ConfirmPassword" className="form-control" required/>
+                      <input onChange={this.handleChange} type="password" id="ConfirmPassword" className="form-control" required/>
                     </div>
 
                     <label htmlFor="inputPhoneNumber">Phone number</label>
                     <div className="form-label-group">
-                      <input name="mobile" type="Number" id="inputMobile" className="form-control" required/>
+                      <input onChange={this.handleChange} name="mobile" type="Number" id="inputMobile" className="form-control" required/>
                     </div>
 
-                    <label htmlFor="inputPhoneNumber">Fuel Economy</label>
+                    <label htmlFor="inputPhoneNumber">Miles per Gallon</label>
                     <div className="form-label-group">
-                      <input name="milesPerGallon" type="Number" id="inputFuelEconomy" className="form-control" required/>
+                      <input onChange={this.handleChange} name="milesPerGallon" type="Number" id="inputFuelEconomy" className="form-control" required/>
                     </div>
 
                     <button
                       className="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
                       type="submit"
-                      onClick = {e => this.onSubmit(e)}
+                      onClick = {this.handleSubmit}
                     >
                       Register
                     </button>
