@@ -17,7 +17,8 @@ export default class AboutUs extends Component {
 
   render() {
     return (
-      <div>=
+
+      <div className = "rows">
         {/* Team Member 1 */}
         <div className="about">
           <div className="card border-0 shadow">
@@ -29,8 +30,6 @@ export default class AboutUs extends Component {
           </div>
         </div>
           
-        
-
         {/* Team Member 2 */}
         <div className="about">
           <div className="card border-0 shadow">
@@ -63,6 +62,7 @@ export default class AboutUs extends Component {
           </div>
         </div>
       </div>
+      <section></section>
   </div>
 
     );
