@@ -15,7 +15,7 @@
   }
 
 #login-Logo {
-  margin-left: 27%;
+  margin-left: 18%;
 }
 
   .login,
@@ -45,9 +45,6 @@
     font-weight: 300;
   }
 
-  #login-Logo {
-    margin-left: 27%;
-  }
 
   .btn-login {
     font-size: 0.9rem;
