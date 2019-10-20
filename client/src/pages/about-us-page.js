@@ -26,16 +26,17 @@ export default class AboutUs extends Component {
     return (
       <div>
         
-          <div className="container justify-content-end">
+          <div className="container justify-content-center">
+            
             <div className="row">
-
-              <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
-                <div className="bg-primary text-center py-4 mb-4">
-                  <h1 className="font-weight-light text-white">The Team</h1>
-                </div>
+              <div className="col-12 bg-primary text-center py-4 mb-4">
+                <h1 className="font-weight-light text-white">The Team</h1>
               </div>
+            {/* /.row*/}
+            </div>
+          
 
-              
+              <div className="row">
 
               {/* Team Member 1 */}
               <div className="col-xl-6 col-lg-6 col-md-4 col-sm-12 mt-5 mb-5">
@@ -48,8 +49,7 @@ export default class AboutUs extends Component {
                 </div>
               </div>
                 
-              
-
+          
               {/* Team Member 2 */}
               <div className="col-xl-6 col-lg-6 col-md-4 col-sm-12 mt-5 mb-5">
                 <div className="card border-0 shadow">
@@ -60,10 +60,11 @@ export default class AboutUs extends Component {
                   </div>
                 </div>
               </div>
-              
+
+            {/* /.row*/}    
             </div>
 
-            
+            <div className="row">            
 
             {/* Team Member 3 */}
             <div className="col-xl-6 col-lg-6 col-md-4 col-sm-12 mt-5 mb-5">
@@ -75,8 +76,7 @@ export default class AboutUs extends Component {
                 </div>
               </div>
             </div>
-            
-             
+                         
 
             {/* Team Member 4 */}
             <div className="col-xl-6 col-lg-6 col-md-4 col-sm-12 mt-5 mb-5">
@@ -89,11 +89,14 @@ export default class AboutUs extends Component {
               </div>
             </div>
 
-          {/* /.row*/}
-          </div>
+           {/* /.row*/}
+           </div>
+
+          
         {/* /.container*/}
         </div>
 
+      </div>
     );
   }
 }
