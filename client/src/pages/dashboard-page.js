@@ -30,7 +30,8 @@ export default class Groups extends Component {
 
   calculteCarboData = async (e) => {
     e.preventDefault();
-    const milesPerGallons = 20;
+    const user = await server.get('/users/');
+    const milesPerGallons = user.data.milesPerGallonDefault;
     const dist = parseFloat(await distance(this.state.from, this.state.to));
     const newFoot = dist / milesPerGallons * 8.887;
     const newGallonsUsed = dist*milesPerGallons;
