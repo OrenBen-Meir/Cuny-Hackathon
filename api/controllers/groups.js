@@ -6,7 +6,10 @@ const middlewares = require('../middlewares');
 
 emailExists = async (email) => {
   try{
-      users = await User.find({email});
+      let users = await User.find();
+      users = users.filter(user => {
+        return user.email === email
+      });
       return users.length > 0;
   } catch(err) {
       return false;
@@ -23,21 +26,22 @@ router.get('/:id', middlewares.requireToken, async (req, res, next) => {
   }
 });
 
-router.get('/', middlewares.requireToken, async (req, res, next) => {
+router.post('/', middlewares.requireToken, async (req, res, next) => {
   // get all groups user is in
   try{
-    const groups = await Group.find();
-    groups = groups.filter( group =>
-      group.users.filter(email => email === req.body.email).length > 0
+    let groups = await Group.find();
+    groups = groups.filter( group => {
+        return group.users.filter(email => email === req.body.email).length > 0;
+      }
     );
     return res.json(groups);
   } catch (err) {
-      res.status(404).json({err: err.toString()});
+      res.status(404).json({err: err.toString(), msg: "filter"});
   }
 });
 
 
-router.post('/', middlewares.requireToken, async (req, res) => {
+router.post('/create', middlewares.requireToken, async (req, res) => {
   // Create group
   newGroup = new Group({
     name: req.body.name,
@@ -50,7 +54,7 @@ router.post('/', middlewares.requireToken, async (req, res) => {
 router.put('/:id/user/', async (req, res) => {
   // insert user into group by email
   try{
-    emailIsFound = await emailExists(req.body.email);
+    let emailIsFound = await emailExists(req.body.email);
     if(!emailIsFound){
       return res.status(404).json({err: "Email not found!"});
     }

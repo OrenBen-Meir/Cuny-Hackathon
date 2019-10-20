@@ -14,6 +14,11 @@ router.get('/', middlewares.requireToken, (req, res) => {
   res.json(req.user);
 });
 
+router.get('/:email', middlewares.requireToken, async (req, res) => {
+  users = await User.find({email: req.params.email})
+  res.json(users);
+});
+
 router.post('/signin', middlewares.requireLogin, (req, res) => {
   res.send({ token: middlewares.tokenForUser(req.user) });
 });
