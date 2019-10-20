@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
 import axios from 'axios';
-
+import React, { Component } from 'react';
+import logo from '../css/images/Logo.png';
 import '../css/sign-up.css';
 
-import logo from '../css/images/Logo.png';
+
 
 
 
@@ -41,13 +41,12 @@ export default class CreateUser extends Component {
   render() {
     return (
       <div className="row no-gutter ">
-           
-        <div className="col-md-8 col-lg-6">
+        <div className="wrapper">
+        <div className="column">
           <div className="login d-flex align-items-center py-5">
             <div className="container-fluid">
             <div className="row">
               <div className="col-md-9 col-lg-8 mx-auto">
-              
               <img className="sign-Up-Logo align-items-center text-Label" src={logo} width="250px" height="250px" alt="Climater Logo"/>
                 
                 <h3 className="login-heading mb-4 align-items-center text-Label">Create an account!</h3>
@@ -96,13 +95,12 @@ export default class CreateUser extends Component {
           </div>
         </div>
       </div>
+      </div>
 
       <div className="d-none d-md-flex col-md-4 col-lg-6 ">
         <section>
         </section>
       </div>
-      
   </div>
-            )
-  }
+  )}
 }
