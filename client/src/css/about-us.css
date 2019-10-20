@@ -38,6 +38,7 @@ section {
     position: relative;
     animation: animate 10s ease-in-out infinite;
     padding: 100%;
+    z-index: -2;
   }
 
   @keyframes animate {
